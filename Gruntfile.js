@@ -2,7 +2,7 @@
 
 var chalk = require('chalk');
 var matchdep = require('matchdep');
-var getGithubDirtyFiles = require('./js/grunt/github_dirty_files');
+var stagedGithubFiles = require('staged-github-files');
 
 module.exports = function(grunt) {
 
@@ -41,25 +41,25 @@ module.exports = function(grunt) {
                 jshintrc: true
             },
             changed: {
-                src: getGithubDirtyFiles.filter('js')
+                src: stagedGithubFiles.filter('js')
             },
             changedForce: {
                 options: {
                     force: true
                 },
-                src: getGithubDirtyFiles.filter('js')
+                src: stagedGithubFiles.filter('js')
             }
         },
 
         jscs: {
             changed: {
-                src: getGithubDirtyFiles.filter('js')
+                src: stagedGithubFiles.filter('js')
             },
             changedForce: {
                 options: {
                     force: true
                 },
-                src: getGithubDirtyFiles.filter('js')
+                src: stagedGithubFiles.filter('js')
             }
         },
 
