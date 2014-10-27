@@ -1,1 +1,10 @@
+.editorconfig
+.jscsrc
+.jshintignore
+.jshintrc
+.npmignore
+.scss-lint.yml
 bower_components
+livereload.js
+node_modules
+npm-debug.log

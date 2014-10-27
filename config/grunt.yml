@@ -1,0 +1,20 @@
+config:
+    liveReloadPort: 35750
+    files:
+        js:
+            app:
+                src:
+                  - Gruntfile.js
+            livereload: web/js/livereload.js
+        scss:
+            loadPaths:
+              - web/css
+              - web/css/site
+              - web/vendor
+              - web/vendor/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap
+              - web/vendor/bourbon/dist
+            app:
+                src:
+                  - web/css/application.scss
+                dest: web/css/main.css
+            watch: web/css/**/*.scss
